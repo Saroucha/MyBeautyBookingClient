@@ -84,7 +84,7 @@ public class Formulaire extends AppCompatActivity {
     static private CheckBox cb1;
     static private CheckBox cb2;
     static private CheckBox cb3;
-
+// test de git
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
