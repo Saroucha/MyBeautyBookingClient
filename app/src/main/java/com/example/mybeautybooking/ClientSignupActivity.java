@@ -254,14 +254,14 @@ public class ClientSignupActivity extends AppCompatActivity {
         String email = emailText_Client.getText().toString();
         String password = passwordText_Client.getText().toString();
 
-        if (name.isEmpty() || name.length() < 3) {
+        if (name.isEmpty()) {
             nameText_Client.setError(getString(R.string.error_name_signup_msg));
             valid = false;
         } else {
             nameText_Client.setError(null);
         }
 
-        if (firstname.isEmpty() || firstname.length() < 3) {
+        if (firstname.isEmpty()) {
             firstnameText_Client.setError(getString(R.string.error_firstname_signup_msg));
             valid = false;
         } else {
