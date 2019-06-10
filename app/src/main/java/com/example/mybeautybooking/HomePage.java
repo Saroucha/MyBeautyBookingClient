@@ -2,29 +2,14 @@ package com.example.mybeautybooking;
 
 import android.animation.ValueAnimator;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.animation.AlphaAnimation;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.mybeautybooking.activity.Formulaire;
-import com.example.mybeautybooking.activity.RepotoireBeautyActivity;
-import com.example.mybeautybooking.activity.VentePrivée;
-import com.igalata.bubblepicker.BubblePickerListener;
-import com.igalata.bubblepicker.model.PickerItem;
-import com.igalata.bubblepicker.rendering.BubblePicker;
-
-import org.jetbrains.annotations.NotNull;
-
-import java.time.Duration;
-import java.util.ArrayList;
 
 public class HomePage extends AppCompatActivity {
 
@@ -74,7 +59,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(HomePage.this, ClientLoginActivity.class);
+                Intent intent = new Intent(HomePage.this, ClientLoginActivity_recherche.class);
                 startActivity(intent);
             }
         });

@@ -68,7 +68,7 @@
             android:theme="@style/HiddenTitleTheme"/>
         <activity android:name=".ClientSignupActivity"
             android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".ClientLoginActivity"
+        <activity android:name=".ClientLoginActivity_recherche"
             android:theme="@style/HiddenTitleTheme"/>
         <activity android:name=".Login_pro"
             android:theme="@style/HiddenTitleTheme"/>

@@ -7,9 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.mybeautybooking.ClientLoginActivity;
+import com.example.mybeautybooking.ClientLoginActivity_recherche;
 import com.example.mybeautybooking.HomePage;
-import com.example.mybeautybooking.Login_pro;
 import com.example.mybeautybooking.R;
 
 public class RepotoireBeautyActivity extends AppCompatActivity {
@@ -28,7 +27,7 @@ public class RepotoireBeautyActivity extends AppCompatActivity {
             @Override
         public void onClick(View v) {
 
-            Intent intent = new Intent(RepotoireBeautyActivity.this, ClientLoginActivity.class);
+            Intent intent = new Intent(RepotoireBeautyActivity.this, ClientLoginActivity_recherche.class);
             startActivity(intent);
         }
     });

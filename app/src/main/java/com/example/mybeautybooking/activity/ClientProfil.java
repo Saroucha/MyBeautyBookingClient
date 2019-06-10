@@ -1,15 +1,11 @@
 package com.example.mybeautybooking.activity;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -27,12 +23,10 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mybeautybooking.ClientLoginActivity;
 import com.example.mybeautybooking.ClientProfilActivity;
 import com.example.mybeautybooking.HomePage;
 import com.example.mybeautybooking.R;
 import com.example.mybeautybooking.SharedPrefManager;
-import com.example.mybeautybooking.fragment.ProfilFragment;
 
 import org.json.JSONException;
 import org.json.JSONObject;

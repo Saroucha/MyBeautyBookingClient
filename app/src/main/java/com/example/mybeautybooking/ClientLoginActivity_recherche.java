@@ -4,13 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.content.Intent;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.util.JsonReader;
 import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -29,7 +24,6 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mybeautybooking.activity.VentePrivée;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -37,17 +31,10 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.json.JSONArray;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.Writer;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
-public class ClientLoginActivity extends AppCompatActivity {
-    private static final String TAG = "ClientLoginActivity";
+public class ClientLoginActivity_recherche extends AppCompatActivity {
+    private static final String TAG = "ClientLoginActivity_recherche";
     private static final int REQUEST_SIGNUP = 0;
     public ArrayList<String> arrayList = new ArrayList<>();
     ProgressBar progressBar;
@@ -58,13 +45,13 @@ public class ClientLoginActivity extends AppCompatActivity {
     TextView signupLink_Client;
 
     private RequestQueue requestQueue;
-    private static final String URL = "http://10.192.133.155/beautybooking/Login_Client.php";
+    private static final String URL = "http://192.168.1.27/Test-Projet/Login_Client.php";
     private StringRequest request;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_client_login);
+        setContentView(R.layout.activity_client_login_recherche);
 
         progressBar = (ProgressBar) findViewById(R.id.progressbar);
         progressBar.setVisibility(View.INVISIBLE);
@@ -111,7 +98,7 @@ public class ClientLoginActivity extends AppCompatActivity {
         //progressBar.setVisibility(View.VISIBLE);// To Show ProgressBar
         //To Hide ProgressBar
 
-//        final ProgressDialog progressDialog = new ProgressDialog(ClientLoginActivity.this,
+//        final ProgressDialog progressDialog = new ProgressDialog(ClientLoginActivity_recherche.this,
 //                R.style.AppTheme_Dark_Dialog);
 //        progressDialog.setIndeterminate(true);
 //        progressDialog.setMessage(getString(R.string.authentification_dialog_msg));
@@ -264,7 +251,7 @@ public class ClientLoginActivity extends AppCompatActivity {
     /*access to client profil*/
     public void onLoginSuccess() {
         loginButton_Client.setEnabled(true);
-        Intent intent = new Intent(ClientLoginActivity.this, ClientProfilActivity.class);
+        Intent intent = new Intent(ClientLoginActivity_recherche.this, ClientProfilActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         finish();

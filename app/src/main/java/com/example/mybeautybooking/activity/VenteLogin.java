@@ -81,7 +81,7 @@ import java.util.ArrayList;
 
 public class VenteLogin extends AppCompatActivity {
 
-    private static final String TAG = "ClientLoginActivity";
+    private static final String TAG = "ClientLoginActivity_recherche";
     private static final int REQUEST_SIGNUP = 0;
     public ArrayList<String> arrayList = new ArrayList<>();
     ProgressBar progressBar;
@@ -145,7 +145,7 @@ public class VenteLogin extends AppCompatActivity {
         //progressBar.setVisibility(View.VISIBLE);// To Show ProgressBar
         //To Hide ProgressBar
 
-//        final ProgressDialog progressDialog = new ProgressDialog(ClientLoginActivity.this,
+//        final ProgressDialog progressDialog = new ProgressDialog(ClientLoginActivity_recherche.this,
 //                R.style.AppTheme_Dark_Dialog);
 //        progressDialog.setIndeterminate(true);
 //        progressDialog.setMessage(getString(R.string.authentification_dialog_msg));
