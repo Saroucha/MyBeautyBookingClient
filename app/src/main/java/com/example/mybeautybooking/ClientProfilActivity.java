@@ -27,14 +27,13 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
+import com.example.mybeautybooking.activity.AboutUsActivity;
 import com.example.mybeautybooking.activity.ClientProfil;
-import com.example.mybeautybooking.activity.VentePrivée;
 import com.example.mybeautybooking.activity.SettingsActivity;
 import com.example.mybeautybooking.fragment.HomeFragment;
-import com.example.mybeautybooking.fragment.ProfilFragment;
 
 
-public class ClientProfilActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener, ProfilFragment.OnFragmentInteractionListener {
+public class ClientProfilActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.OnFragmentInteractionListener {
 
     private NavigationView navigationView;
     private DrawerLayout drawer;
@@ -85,7 +84,7 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
-        fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab = (FloatingActionButton) findViewById(R.id.fab);
 //
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
@@ -175,14 +174,6 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
                 // home
                 HomeFragment homeFragment = new HomeFragment();
                 return homeFragment;
-//            case 1:
-//                // settings fragment
-//                SettingsFragment settingsFragment = new SettingsFragment();
-//                return settingsFragment;
-//            case 2:
-//                // profil fragment
-//                ProfilFragment profilFragment = new ProfilFragment();
-//                return profilFragment;
             case 1:
                 finish();
                 overridePendingTransition(0, 0);
@@ -212,11 +203,10 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
-                        case R.id.nav_search:
+                    case R.id.nav_search:
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;
                         break;
-
 
                     case R.id.nav_logout:
                         navItemIndex = 1;
@@ -233,8 +223,14 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
                         drawer.closeDrawers();
                         return true;
 
+                    case R.id.nav_about_us:
+                        // launch new intent instead of loading fragment
+                        startActivity(new Intent(com.example.mybeautybooking.ClientProfilActivity.this, AboutUsActivity.class));
+                        drawer.closeDrawers();
+                        return true;
+
                     default:
-                        startActivity(new Intent(com.example.mybeautybooking.ClientProfilActivity.this, VentePrivée.class));
+                        startActivity(new Intent(com.example.mybeautybooking.ClientProfilActivity.this, VentesPriveesActivity.class));
                         drawer.closeDrawers();
                         return true;
                 }
@@ -347,10 +343,10 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
 
     // show or hide the fab
     private void toggleFab() {
-        if (navItemIndex == 0)
-            fab.show();
-        else
-            fab.hide();
+//        if (navItemIndex == 0)
+//            fab.show();
+//        else
+//            fab.hide();
     }
 
     @Override
@@ -360,17 +356,9 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
 
     @Override
     public void onFragmentInteraction(Uri uri) {
-        ProfilFragment profilFragment = new ProfilFragment();
+        HomeFragment homeFragment = new HomeFragment();
 
     }
-    @Override
-    public void onFragmentInteractionHome(Uri uri) {
-        Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show();
-        ProfilFragment profilFragment = new ProfilFragment();
-
-
-    }
-
 
 
 }

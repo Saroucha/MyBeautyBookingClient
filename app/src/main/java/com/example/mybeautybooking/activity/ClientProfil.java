@@ -57,8 +57,8 @@ public class ClientProfil extends AppCompatActivity {
     ClientProfilActivity clientProfilActivity;
 
     private RequestQueue requestQueue;
-    private static final String URL = "http://10.192.133.155/beautybooking/delete_test.php";
-    private static final String URL1 = "http://10.192.133.155/beautybooking/update.php";
+    private static final String URL = "http://192.168.1.27/Test-Projet/delete_test.php";
+    private static final String URL1 = "http://192.168.1.27/Test-Projet/update.php";
     private StringRequest request;
 
     @Override
@@ -101,14 +101,14 @@ public class ClientProfil extends AppCompatActivity {
 
 
 
-        logoutButton = (Button)findViewById(R.id.btn_logout);
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                logout();
-            }
-        });
+//        logoutButton = (Button)findViewById(R.id.btn_logout);
+//        logoutButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//                logout();
+//            }
+//        });
 
         clientProfilActivity = new ClientProfilActivity();
 //        deleteButton = (Button)findViewById(R.id.btn_delete);

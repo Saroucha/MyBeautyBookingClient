@@ -23,7 +23,6 @@ import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.mybeautybooking.activity.VentesPrivéesActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -72,7 +71,7 @@ public class ClientLoginActivity_ventes extends AppCompatActivity {
         signupLink_Client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ClientSignupActivity_Ventes.class);
+                Intent intent = new Intent(getApplicationContext(), ClientSignupActivity_ventes.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }
@@ -250,7 +249,7 @@ public class ClientLoginActivity_ventes extends AppCompatActivity {
     /*access to client profil*/
     public void onLoginSuccess() {
         loginButton_Client.setEnabled(true);
-        Intent intent = new Intent(ClientLoginActivity_ventes.this, VentesPrivéesActivity.class);
+        Intent intent = new Intent(ClientLoginActivity_ventes.this, VentesPriveesActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
         finish();

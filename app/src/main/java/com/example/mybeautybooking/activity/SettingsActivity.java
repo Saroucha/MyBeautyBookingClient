@@ -63,14 +63,14 @@ public class SettingsActivity extends AppCompatActivity {
             }
         });
 
-        aboutUsButton= (Button)findViewById(R.id.btn_about_us);
-        aboutUsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                redirecte (1);
-
-            }
-        });
+//        aboutUsButton= (Button)findViewById(R.id.btn_about_us);
+//        aboutUsButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                redirecte (1);
+//
+//            }
+//        });
 
 
         privacyButton= (Button)findViewById(R.id.btn_privacy_policy);
@@ -110,7 +110,7 @@ public class SettingsActivity extends AppCompatActivity {
                     public void onClick(DialogInterface arg0, int arg1) {
 
                         //If the user confirms deletion, execute DeleteMovieAsyncTask
-                        delete();
+                        SettingsActivity.this.delete();
 
                     }
                 });

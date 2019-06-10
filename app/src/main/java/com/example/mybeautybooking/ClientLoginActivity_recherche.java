@@ -73,7 +73,7 @@ public class ClientLoginActivity_recherche extends AppCompatActivity {
         signupLink_Client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ClientSignupActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ClientSignupActivity_recherche.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivityForResult(intent, REQUEST_SIGNUP);
             }

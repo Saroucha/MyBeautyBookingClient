@@ -21,7 +21,7 @@
         android:layout_below="@+id/logo"
         android:layout_marginTop="13dp"
         android:layout_marginLeft="10dp"
-        android:text="Ils se déplacent chez vous :  "
+        android:text="Ils se déplacent chez moi :  "
         android:textSize="15dp" />
 
     <FrameLayout
@@ -63,12 +63,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:text="Vente privée de cette recherche"
+        android:text="Accéder aux ventes privées de cette recherche"
         android:textStyle="bold"
         android:background="@color/colorblack"
         android:layout_gravity="right"
         android:textColor="@color/colorwhite"
         android:id="@+id/logout"
-        android:textSize="15dp" />
+        android:textSize="14dp" />
 
 </RelativeLayout>

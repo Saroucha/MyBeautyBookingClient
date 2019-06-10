@@ -9,54 +9,37 @@
 
 
     <Button
+        android:id="@+id/btn_privacy_policy"
+        android:text="@string/privacy_policy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:padding="15dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/gaffer"
+        android:background="@color/colorblack"
+        android:textColor="@color/colorwhite"/>
+
+    <Button
         android:id="@+id/btn_delete"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_privacy_policy"
         android:layout_gravity="right"
         android:gravity="center"
         android:text="Suppression"
         android:textSize="10dp"
         android:textStyle="bold"
-        android:background="@drawable/button_round"
         android:padding="15dp"
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/gaffer"
-        android:textColor="@color/colorblack"/>
-
-    <Button
-        android:id="@+id/btn_about_us"
-        android:text="@string/nav_about_us"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_delete"
-        android:layout_gravity="right"
-        android:gravity="center"
-        android:textSize="10dp"
-        android:textStyle="bold"
-        android:background="@drawable/button_round"
-        android:padding="15dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/gaffer"
-        android:textColor="@color/colorblack"/>
-
-    <Button
-        android:id="@+id/btn_privacy_policy"
-        android:text="@string/privacy_policy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_about_us"
-        android:layout_gravity="right"
-        android:gravity="center"
-        android:textSize="10dp"
-        android:textStyle="bold"
-        android:background="@drawable/button_round"
-        android:padding="15dp"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/gaffer"
-        android:textColor="@color/colorblack"/>
+        android:background="@color/colorblack"
+        android:textColor="@color/colorwhite"/>
 
 
 </RelativeLayout>
