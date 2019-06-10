@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mybeautybooking">
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -23,7 +22,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
+        <activity android:name=".ClientLoginActivity_ventes"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -38,47 +37,58 @@
 
         <activity
             android:name=".activity.MapsActivity"
-            android:theme="@style/HiddenTitleTheme"
-            >
-
-
-        </activity>
-        <activity android:name=".activity.Main_Act_Map_Listpro"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.Detail_Pro"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.Formulaire"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.VenteLogin"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.RepotoireBeautyActivity"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.VentePrivée"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.PrivacyPolicyActivity"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.AboutUsActivity"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".activity.ClientProfil"
-            android:theme="@style/HiddenTitleTheme"/>
+            android:theme="@style/HiddenTitleTheme"></activity>
+        <activity
+            android:name=".activity.Main_Act_Map_Listpro"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.Detail_Pro"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.Formulaire"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.VenteLogin"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.RepotoireBeautyActivity"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.VentePrivée"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.PrivacyPolicyActivity"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.AboutUsActivity"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".activity.ClientProfil"
+            android:theme="@style/HiddenTitleTheme" />
         <activity
             android:name=".ClientProfilActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activity.SettingsActivity"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".ClientSignupActivity"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".ClientLoginActivity_recherche"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".Login_pro"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".Inscription_pro"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".Profile_Pro"
-            android:theme="@style/HiddenTitleTheme"/>
-        <activity android:name=".HomePage"
-            android:theme="@style/HiddenTitleTheme"
-            >
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".ClientSignupActivity"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".ClientLoginActivity_recherche"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".Login_pro"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".Inscription_pro"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".Profile_Pro"
+            android:theme="@style/HiddenTitleTheme" />
+        <activity
+            android:name=".HomePage"
+            android:theme="@style/HiddenTitleTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
