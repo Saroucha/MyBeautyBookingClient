@@ -22,8 +22,12 @@ import com.android.volley.ServerError;
 import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.example.mybeautybooking.ClientLoginActivity_recherche;
 import com.example.mybeautybooking.ClientProfilActivity;
 import com.example.mybeautybooking.HomePage;
+import com.example.mybeautybooking.Login_pro;
+import com.example.mybeautybooking.Profile_Pro;
 import com.example.mybeautybooking.R;
 import com.example.mybeautybooking.SharedPrefManager;
 
@@ -43,7 +47,7 @@ public class SettingsActivity extends AppCompatActivity {
     ClientProfilActivity clientProfilActivity;
 
     private RequestQueue requestQueue;
-    private static final String URL = "http://192.168.43.242/Test-Projet/delete_test.php";
+    private static final String URL = "http://192.168.1.27/Test-Projet/delete_test.php";
     private StringRequest request;
 
     @Override
@@ -52,6 +56,8 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         clientProfilActivity = new ClientProfilActivity();
+        requestQueue = Volley.newRequestQueue(this);
+
 
         deleteButton = (Button)findViewById(R.id.btn_delete);
         deleteButton.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +116,7 @@ public class SettingsActivity extends AppCompatActivity {
                     public void onClick(DialogInterface arg0, int arg1) {
 
                         //If the user confirms deletion, execute DeleteMovieAsyncTask
-                        SettingsActivity.this.delete();
+                        delete();
 
                     }
                 });
@@ -146,11 +152,12 @@ public class SettingsActivity extends AppCompatActivity {
                         new android.os.Handler().postDelayed(
                                 new Runnable() {
                                     public void run() {
-                                        // onLoginSuccess
+                                        // onDeletSuccess
                                         destroy();
-                                        finish();
-//                                        progressBar.setVisibility(View.INVISIBLE);
-                                        //progressDialog2.dismiss();
+                                        Intent intent = new Intent(SettingsActivity.this, ClientLoginActivity_recherche.class);
+                                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                                        startActivity(intent);
+                                        SettingsActivity.this.finish();
                                     }
                                 }, 100);
                     }else {destroy();}

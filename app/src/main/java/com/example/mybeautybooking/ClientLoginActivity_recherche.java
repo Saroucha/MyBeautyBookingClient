@@ -37,12 +37,13 @@ public class ClientLoginActivity_recherche extends AppCompatActivity {
     private static final String TAG = "ClientLoginActivity_recherche";
     private static final int REQUEST_SIGNUP = 0;
     public ArrayList<String> arrayList = new ArrayList<>();
-    ProgressBar progressBar;
+   // ProgressBar progressBar;
 
     EditText emailText_Client;
     EditText passwordText_Client;
     Button  loginButton_Client;
-    TextView signupLink_Client;
+    Button signupLink_Client;
+    TextView acceuil;
 
     private RequestQueue requestQueue;
     private static final String URL = "http://192.168.1.27/Test-Projet/Login_Client.php";
@@ -53,12 +54,26 @@ public class ClientLoginActivity_recherche extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_client_login_recherche);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
-        progressBar.setVisibility(View.INVISIBLE);
+//        progressBar = (ProgressBar) findViewById(R.id.progressbar);
+//        progressBar.setVisibility(View.INVISIBLE);
 
         emailText_Client = (EditText) findViewById(R.id.input_email);
         passwordText_Client = (EditText) findViewById(R.id.input_password);
         loginButton_Client = (Button) findViewById(R.id.btn_login);
+        acceuil=(TextView)findViewById(R.id.accueil);
+
+
+        //faire des actions aux boutons et textView lors du click
+
+        acceuil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(ClientLoginActivity_recherche.this, HomePage.class);
+                startActivity(intent);
+            }
+        });
+
         loginButton_Client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,7 +84,7 @@ public class ClientLoginActivity_recherche extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(this);
 
-        signupLink_Client = (TextView) findViewById(R.id.link_signup);
+        signupLink_Client = (Button) findViewById(R.id.link_signup);
         signupLink_Client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -94,16 +109,8 @@ public class ClientLoginActivity_recherche extends AppCompatActivity {
 
         loginButton_Client.setEnabled(false);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
-        //progressBar.setVisibility(View.VISIBLE);// To Show ProgressBar
-        //To Hide ProgressBar
 
-//        final ProgressDialog progressDialog = new ProgressDialog(ClientLoginActivity_recherche.this,
-//                R.style.AppTheme_Dark_Dialog);
-//        progressDialog.setIndeterminate(true);
-//        progressDialog.setMessage(getString(R.string.authentification_dialog_msg));
-//        progressDialog.show();
-        progressBar.setVisibility(View.VISIBLE);
+        //progressBar.setVisibility(View.VISIBLE);
 
         String email = emailText_Client.getText().toString();
         String password = passwordText_Client.getText().toString();
@@ -139,8 +146,7 @@ public class ClientLoginActivity_recherche extends AppCompatActivity {
                                         // onLoginSuccess
                                         onLoginSuccess();
 
-                                        progressBar.setVisibility(View.INVISIBLE);
-//                        progressDialog.dismiss();
+                                       // progressBar.setVisibility(View.INVISIBLE);
                                     }
                                 }, 100);
                     }else {
@@ -150,8 +156,7 @@ public class ClientLoginActivity_recherche extends AppCompatActivity {
                                     public void run() {
                                         //  onLoginFailed
                                         onLoginFailed();
-                                        progressBar.setVisibility(View.INVISIBLE);
-//                        progressDialog.dismiss();
+                                       // progressBar.setVisibility(View.INVISIBLE);
                                     }
                                 }, 100);                    }
 

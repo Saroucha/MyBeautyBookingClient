@@ -67,7 +67,7 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
 
 
     private RequestQueue requestQueue;
-    private static final String URL = "http://10.192.133.155/beautybooking/delete_test.php";
+    private static final String URL = "http://192.168.1.27/Test-Projet/delete_test.php";
     private StringRequest request;
 
     @Override
@@ -175,8 +175,10 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
                 HomeFragment homeFragment = new HomeFragment();
                 return homeFragment;
             case 1:
-                finish();
-                overridePendingTransition(0, 0);
+                Intent intent = new Intent(ClientProfilActivity.this, ClientLoginActivity_recherche.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                ClientProfilActivity.this.finish();
 
                 Toast.makeText(getBaseContext(), R.string.logout, Toast.LENGTH_LONG).show();
             default:

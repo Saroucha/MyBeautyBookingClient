@@ -22,10 +22,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".VentesPriveesActivity"></activity>
-        <activity android:name=".ClientSignupActivity_ventes" />
-        <activity android:name=".ClientSignupActivity_recherche" />
-        <activity android:name=".ClientLoginActivity_ventes" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -37,6 +33,18 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/AIzaSyAyprq5bT5NMEAqfJwKzfi0MMuSlPd_HRc" />
+
+        <activity android:name=".VentesPriveesActivity"
+            android:theme="@style/HiddenTitleTheme" />
+
+        <activity android:name=".ClientSignupActivity_ventes"
+            android:theme="@style/HiddenTitleTheme" />
+
+        <activity android:name=".ClientSignupActivity_recherche"
+            android:theme="@style/HiddenTitleTheme" />
+
+        <activity android:name=".ClientLoginActivity_ventes"
+            android:theme="@style/HiddenTitleTheme" />
 
         <activity
             android:name=".activity.MapsActivity"

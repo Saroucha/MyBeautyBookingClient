@@ -34,7 +34,7 @@ public class ClientSignupActivity_ventes extends AppCompatActivity {
 
     private static final String TAG = "SignupActivity";
 
-    ProgressBar progressBar;
+    //ProgressBar progressBar;
 
 
     EditText nameText_Client;
@@ -46,7 +46,7 @@ public class ClientSignupActivity_ventes extends AppCompatActivity {
     EditText emailText_Client;
     EditText passwordText_Client;
     Button signupButton_Client;
-    TextView loginLink_Client;
+    Button loginLink_Client;
 
     private RequestQueue requestQueue;
     private static final String URL = "http://192.168.1.27/Test-Projet/client_add.php";
@@ -58,7 +58,7 @@ public class ClientSignupActivity_ventes extends AppCompatActivity {
         setContentView(R.layout.activity_client_signup_recherche);
 
 
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
+        //progressBar = (ProgressBar) findViewById(R.id.progressbar);
 //        progressBar.setVisibility(View.INVISIBLE);
 
         nameText_Client = (EditText) findViewById(R.id.input_name);
@@ -80,7 +80,7 @@ public class ClientSignupActivity_ventes extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
 
-        loginLink_Client = (TextView) findViewById(R.id.link_login);
+        loginLink_Client = (Button) findViewById(R.id.link_login);
         loginLink_Client.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
