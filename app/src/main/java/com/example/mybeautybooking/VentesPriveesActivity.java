@@ -26,7 +26,7 @@ public class VentesPriveesActivity extends AppCompatActivity {
 
                 Toast.makeText(getBaseContext(), R.string.logout, Toast.LENGTH_LONG).show();
 
-                Intent intent = new Intent(VentesPriveesActivity.this, HomePage.class);
+                Intent intent = new Intent(VentesPriveesActivity.this, ClientLoginActivity_ventes.class);
                 startActivity(intent);
             }
         });
