@@ -323,10 +323,10 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_logout) {
-            Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
-            return true;
-        }
+//        if (id == R.id.action_logout) {
+//            Toast.makeText(getApplicationContext(), "Logout user!", Toast.LENGTH_LONG).show();
+//            return true;
+//        }
 
         // user is in notifications fragment
         // and selected 'Mark all as Read'

@@ -59,7 +59,7 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(HomePage.this, ClientLoginActivity_recherche.class);
+                Intent intent = new Intent(HomePage.this, ClientLoginActivity_ventes.class);
                 startActivity(intent);
             }
         });
