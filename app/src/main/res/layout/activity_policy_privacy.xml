@@ -16,7 +16,7 @@
         android:paddingRight="60dp">
 
         <TextView
-            android:layout_marginTop="-300dp"
+            android:layout_marginTop="-200dp"
             android:layout_width="290dp"
             android:fontFamily="@font/beautiful"
             android:textSize="30dp"

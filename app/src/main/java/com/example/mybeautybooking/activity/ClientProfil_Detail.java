@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ClientProfil extends AppCompatActivity {
+public class ClientProfil_Detail extends AppCompatActivity {
     public ArrayList<String> arrayList = new java.util.ArrayList<>();
     ProgressBar progressBar;
     ProgressDialog progressDialog2;
@@ -64,7 +64,7 @@ public class ClientProfil extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profil_client);
+        setContentView(R.layout.activity_profil_client_detail);
 
         nameText_Client = (EditText) findViewById(R.id.input_name);
         nameText_Client.setText(SharedPrefManager.getInstance(getApplicationContext()).getKeyUserName());
@@ -126,7 +126,7 @@ public class ClientProfil extends AppCompatActivity {
 
 
 //    private void confirmDelete() {
-//        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ClientProfil.this);
+//        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ClientProfil_Detail.this);
 //        alertDialogBuilder.setMessage("Êtes-vous sûr de vouloir supprimer votre compte?");
 //        alertDialogBuilder.setPositiveButton("Supprimer",
 //                new DialogInterface.OnClickListener() {
@@ -151,7 +151,7 @@ public class ClientProfil extends AppCompatActivity {
 
 //    public void delete () {
 //
-//        progressDialog2 = new ProgressDialog(ClientProfil.this);
+//        progressDialog2 = new ProgressDialog(ClientProfil_Detail.this);
 //        progressDialog2.setMessage(" Suppression en cours. Veuillez patienter...");
 //        progressDialog2.setIndeterminate(false);
 //        progressDialog2.setCancelable(false);
@@ -335,14 +335,14 @@ public class ClientProfil extends AppCompatActivity {
         String zip = zipInt_Client.getText().toString();
 
 
-        if (name.isEmpty() || name.length() < 3) {
+        if (name.isEmpty()) {
             nameText_Client.setError(getString(R.string.error_name_signup_msg));
             valid = false;
         } else {
             nameText_Client.setError(null);
         }
 
-        if (firstname.isEmpty() || firstname.length() < 3) {
+        if (firstname.isEmpty() ) {
             firstnameText_Client.setError(getString(R.string.error_firstname_signup_msg));
             valid = false;
         } else {
@@ -356,19 +356,19 @@ public class ClientProfil extends AppCompatActivity {
             phoneIntClient.setError(null);
         }
 
-        if (street.isEmpty() || street.length() < 5) {
+        if (street.isEmpty()) {
             streetText_Client.setError(getString(R.string.error_street_signup_msg));
             valid = false;
         } else {
             streetText_Client.setError(null);
         }
 
-        if (city.isEmpty() || city.length() < 3) {
-            cityText_Client.setError(getString(R.string.error_city_signup_msg));
-            valid = false;
-        } else {
-            cityText_Client.setError(null);
-        }
+//        if (city.isEmpty() || city.length() < 3) {
+//            cityText_Client.setError(getString(R.string.error_city_signup_msg));
+//            valid = false;
+//        } else {
+//            cityText_Client.setError(null);
+//        }
 
         if (zip.isEmpty() || zip.length() != 5 ) {
             zipInt_Client.setError(getString(R.string.error_zip_signup_msg));

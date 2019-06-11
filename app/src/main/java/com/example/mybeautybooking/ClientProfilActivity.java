@@ -28,7 +28,7 @@ import android.widget.Toast;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 import com.example.mybeautybooking.activity.AboutUsActivity;
-import com.example.mybeautybooking.activity.ClientProfil;
+import com.example.mybeautybooking.activity.ClientProfil_Detail;
 import com.example.mybeautybooking.activity.SettingsActivity;
 import com.example.mybeautybooking.fragment.HomeFragment;
 
@@ -221,7 +221,7 @@ public class ClientProfilActivity extends AppCompatActivity implements Navigatio
                         return true;
 
                     case R.id.nav_profile:
-                        startActivity(new Intent(com.example.mybeautybooking.ClientProfilActivity.this, ClientProfil.class));
+                        startActivity(new Intent(com.example.mybeautybooking.ClientProfilActivity.this, ClientProfil_Detail.class));
                         drawer.closeDrawers();
                         return true;
 

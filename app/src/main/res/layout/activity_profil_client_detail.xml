@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.ClientProfil">
+    tools:context=".activity.ClientProfil_Detail">
 
     <ImageView
         android:id="@+id/logo"
@@ -29,14 +29,14 @@
         <RelativeLayout
             android:id="@+id/rellay2"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="480dp"
             android:layout_marginTop="10dp"
             android:paddingBottom="20dp">
 
             <LinearLayout
                 android:layout_width="340dp"
-                android:layout_height="456dp"
-                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="30dp"
@@ -218,13 +218,12 @@
         </RelativeLayout>
 
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:layout_below="@+id/rellay2"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="20dp"
             android:layout_weight="1"
             android:background="@color/colorwhite"
             android:orientation="vertical">
@@ -233,17 +232,17 @@
                 android:id="@+id/btn_done"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="12dp"
                 android:layout_marginBottom="1dp"
-                android:layout_gravity="center_horizontal"
-                android:gravity="center"
-                android:text="Enregistrer"
-                android:textSize="10dp"
-                android:textStyle="bold"
-                android:padding="15dp"
-                android:fontFamily="@font/gaffer"
                 android:background="@color/colorblack"
-                android:textColor="@color/colorwhite"/>
+                android:fontFamily="@font/gaffer"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="Enregistrer"
+                android:textColor="@color/colorwhite"
+                android:textSize="10dp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

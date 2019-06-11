@@ -68,16 +68,13 @@
             android:name=".activity.AboutUsActivity"
             android:theme="@style/HiddenTitleTheme" />
         <activity
-            android:name=".activity.ClientProfil"
+            android:name=".activity.ClientProfil_Detail"
             android:theme="@style/HiddenTitleTheme" />
         <activity
             android:name=".ClientProfilActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.SettingsActivity"
-            android:theme="@style/HiddenTitleTheme" />
-        <activity
-            android:name=".ClientSignupActivity"
             android:theme="@style/HiddenTitleTheme" />
         <activity
             android:name=".ClientLoginActivity_recherche"
